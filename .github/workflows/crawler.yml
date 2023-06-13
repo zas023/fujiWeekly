@@ -15,16 +15,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
+    - name: Set up JDK 11
       uses: actions/setup-java@v1
       with:
-        java-version: 1.8
+        java-version: 11
     - name: current date
       run: date
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run Java Application
-      run: java -jar target/fujiWeekly.jar
+      run: java -jar target/FujiWeekly-jar-with-dependencies.jar
     - name: Commit files
       run: |
          git config --local user.email "375027533@qq.com"
