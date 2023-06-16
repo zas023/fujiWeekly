@@ -90,6 +90,7 @@ public class RecipeCrawler {
         Map<String, Object> map = new HashMap<>();
         map.put("total", list.size());
         map.put("data", list);
+        map.put("updateTime", System.currentTimeMillis());
         FileWriter writer = new FileWriter(FINAL_FILE);
         writer.write(new Gson().toJson(map));
         writer.flush();

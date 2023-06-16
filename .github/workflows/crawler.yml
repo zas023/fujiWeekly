@@ -30,9 +30,8 @@ jobs:
          git config --local user.email "375027533@qq.com"
          git config --local user.name "zas023"
          git pull
-         git add recipes.xlsx
          git add recipes.json
-         git commit -m "update recipes.md"
+         git commit -m "update recipes"
     - name: Push changes
       uses:  ad-m/github-push-action@master
       with:
